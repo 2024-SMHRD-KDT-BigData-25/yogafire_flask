@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+.button {  
+  box-shadow: 
+    0.3em 0.3em 0 0 var(#19bc8b),
+    inset 0.3em 0.3em 0 0 var(#19bc8b);
+  
+  &:hover,
+  &:focus {
+    box-shadow: 
+      0 0 0 0 var(#19bc8b),
+      inset 6em 3.5em 0 0 var(#19bc8b);
+  }
+}
+ body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333; 
+  line-height: 1.6;
+  background-color: #f9f9eb;
+}
+ .container {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f9f9eb; 
+  height: 530px;
+}
+
+.yogavideo {
+display: flex;
+width: 65%;
+height: 100%;
+}
+.yogavalue {
+background-color: #f9f9eb;
+    height: 199px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    gap: 10px;
+    align-items: center;
+}
+#video {
+            width: 35%;
+            height: 100%;
+            background-color: black;
+             transform: scaleX(-1); /* 수평 반전 */
+            -webkit-transform: scaleX(-1); /* Webkit 브라우저 호환 */
+           
+        }
+.value {
+	height: 120px;
+	width: 190px;
+}
+.arrow {
+	height: 10%;
+	width: 2%;
+}
+.yogaimg{
+	height: 65%;
+	width: 8%;
+}
+.button-group {
+background-color: #f9f9eb;
+    height: 65%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20%;
+    margin: 2%;
+    border: solid;
+    border-color: #4d7155;
+}
+
+
+.button-group button {
+  background-color: #4d7155;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 80%;
+  height: 35%;
+}
+
+ .button-group button:hover {
+  background-color: #3b5942;
+}
+
+

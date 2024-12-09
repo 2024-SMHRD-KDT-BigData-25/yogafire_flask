@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시퀀스 실행 페이지</title>
+  <link rel="stylesheet" href="/static/css/index10.css">
+</head>
+<body>
+
+    <h1></h1>
+    
+  <div class="container">
+    <iframe class="yogavideo" src="https://www.youtube.com/embed/D3yExRi7EME" 
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <div>
+      <img id="video_feed" src="/video_feed" alt="Pose Detection">
+    </div>
+  </div>
+
+  <div class="yogavalue">
+    <!-- 요가 자세 이미지 시퀀스 -->
+    <img class="yogaimg" src="../img/아동자세.png">
+    <!-- 반복적으로 화살표와 자세 이미지를 추가 -->
+    <div class="button-group">
+      <button onclick="pauseStream()">일시정지</button>
+      <button onclick="stopStream()">그만하기</button>
+    </div>
+  </div>
+
+  <script>
+    function pauseStream() {
+      alert('일시정지 기능은 서버와 연동해야 합니다.');
+    }
+    function stopStream() {
+      alert('그만하기 버튼을 누르면 스트림이 종료됩니다.');
+    }
+  </script>
+</body>
+</html>
