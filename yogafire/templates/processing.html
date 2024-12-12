@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI가 점수를 매기는 중</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .message {
+      margin-top: 20%;
+      font-size: 2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    AI가 점수를 매기는 중...
+  </div>
+
+  <script>
+    function checkStatus() {
+      fetch('/check_status')  // AJAX 요청을 서버로 보냄
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === "done") {
+            // 상태가 완료되면 결과 페이지로 리다이렉션
+            window.location.href = "/final_result";
+          } else {
+            // 1초 후 다시 확인
+            setTimeout(checkStatus, 1000);
+          }
+        })
+        .catch(error => console.error("Error checking status:", error));
+    }
+
+    // 페이지 로드 시 상태 확인 시작
+    checkStatus();
+  </script>
+</body>
+</html>
