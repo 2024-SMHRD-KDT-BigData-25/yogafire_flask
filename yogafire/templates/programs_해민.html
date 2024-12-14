@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시퀀스 실행 페이지</title>
+<link rel="stylesheet" href="/static/css/programs.css">
+<link rel="stylesheet" href="/static/css/fire.css">
+</head>
+<body>
+<header class="topheader">
+	<h1>{{flow_title}}</h1>
+	<h2>{{ps_name}}</h2>
+</header>
+<div class="container">
+  <iframe class="yogavideo" src={{ps_link}}
+          allow="autoplay" title="YouTube video player" frameborder="0" allowfullscreen ></iframe>
+    <div>
+      <img id="video_feed" src="/video_feed/{{id}}/{{ps_idx}}/{{flow_order_idx}}" alt="Pose Detection">
+    </div>
+
+</div>
+<div class="yogavalue">
+	<div class="button-group">
+      <button>일시정지</button>
+      <button id="exit-button">그만하기</button>
+	</div>
+    <div>
+        <p>Activity Score: {{ activity_score if activity_score is not none else '없음' }}</p>
+    </div>
+	<img class="yogaimg" src="/images/yogapose/10-5-1.png">
+	<img class="yogaimg" src="/images/yogapose/1-1-1.png">
+	<img class="yogaimg" src="/images/yogapose/10-2.jpg">
+	<img class="yogaimg" src="/images/yogapose/10-3.jpg">
+	<img class="yogaimg" src="/images/yogapose/10-4.jpg">
+	<img class="yogaimg" src="/images/yogapose/10-6.jpg">
+	<img class="yogaimg" src="/images/yogapose/10-7.jpg">
+	<img class="yogaimg" src="/images/yogapose/10-8.jpg">
+</div>
+
+<script src="/static/js/programs.js"></script> 
+<script>
+  document.getElementById('exit-button').addEventListener('click', function() {
+      window.location.href = '/exit_program';  // Flask의 exit_program 엔드포인트로 리다이렉트
+  });
+
+    
+</script>
+</body>
+</html> 
